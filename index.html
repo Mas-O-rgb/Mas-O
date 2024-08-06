@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/output.css">
+  <link rel="shortcut icon" href="img/Mas-O/MAS_O(3) background_black.png" width="20">
   <title>Mas-O</title>
 </head>
 <body class="bg-black">
@@ -57,7 +58,7 @@
           <h2 class="font-medium text-violet-900 text-lg mb-5 lg:text-2xl">Mahasiswa | Designer | Programmer</h2>
           <p class="font-medium text-primary mb-10">Gua adalah seorang Designer Amatiran yang lagi berusaha mendalami keahlian gua.</p>
 
-          <a href="whatsapp://send?text=Hello&phone=+6289529774360" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:bg-dark transition duration-300 ease-in-out">Coba lokit sini!</a>
+          <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:bg-dark transition duration-300 ease-in-out">Coba lokit sini!</a>
         </div>
 
         <div class="w-full self-end px-4 lg:w-1/2">
@@ -180,18 +181,42 @@
         </div>
       </div>
 
-      <form>
+      <div id="myAlert" class="hidden my-alert flex items-center w-full lg:w-1/2 px-3 py-3 lg:mx-auto mb-10 text-purple-800 rounded-lg bg-purple-200 dark:bg-gray-800 dark:text-purple-400" role="alert">
+        <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div class="ms-3 text-sm font-medium">
+          <strong>Terimakasih!</strong> Sudah mengirimkan pesan untuk kami. 😘
+        </div>
+        <button type="button" class="ms-auto bg-purple-50 text-purple-500 rounded-lg focus:ring-2 focus:ring-purple-400 p-1.5 hover:bg-purple-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-purple-400 dark:hover:bg-gray-700" data-dismiss-target="#myAlert" aria-label="Close">
+          <span class="sr-only">Close</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <form name="Mas-O-Kontak-Form">
         <div class="w-full lg:w-2/3 lg:mx-auto">
           <div class="w-full px-4 mb-8">
             <label for="name" class="text-base text-primary font-bold">Nama</label>
-            <input type="text" id="name" class="w-full bg-purple-400 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+            <input type="text" name="nama" id="name" class="w-full bg-purple-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
           </div>
           <div class="w-full px-4 mb-8">
             <label for="message" class="text-base text-primary font-bold">Pesan</label>
-            <input type="text" id="message" class="w-full bg-purple-400 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32">
+            <input type="text" name="pesan" id="message" class="w-full bg-purple-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32">
           </div>
           <div class="w-full px-4">
-            <button class="text-base font-semibold text-dark bg-purple-400 py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+            <button type="submit" class="btn-kirim text-base font-semibold text-dark bg-purple-400 py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+
+            <button disabled="" type="button" class="hidden btn-loading text-base font-semibold text-white bg-purple-800 py-3 px-8 rounded-full w-full">
+              <svg aria-hidden="true" role="status" class="inline mr-2 w-4 h-4 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"></path>
+              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"></path>
+              </svg>
+              Loading...
+          </button>
           </div>
         </div>
       </form>
@@ -299,5 +324,31 @@
   <!-- Footer Section End-->
 
   <script src="dist/script.js"></script>
+
+  <!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyhA79VJ2BrJ6VBM3dl6fTkPNJgj1Ew1vQBjQn8Gv-grJc4MgbPavQMMaYFt9yzHWg/exec'
+    const form = document.forms['Mas-O-Kontak-Form']
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.myAlert');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // Ketika tombol submit diklik
+      // Tampilkan tombol laoding, hilangkan tombol kirim
+      btnLoading.classList.toogle('hidden');
+      btnKirim.classList.toggle('hidden');
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          //// Tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toogle('hidden');
+          btnKirim.classList.toggle('hidden');
+          // Tampilkan alert
+          myAlert.classList.toggle('hidden');
+          console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script> !-->
 </body>
 </html>

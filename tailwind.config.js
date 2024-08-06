@@ -7,6 +7,9 @@ module.exports = {
       padding: '16px',
     },
     extend: {
+      animation: {
+        'spin': 'spin 1s linear infinite',
+      },
       backgroundImage: {
         'hero-pattern': "url('img/Mas-O/GUA4.png')"
       },
