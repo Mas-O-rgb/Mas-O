@@ -14,9 +14,9 @@ module.exports = {
         'hero-pattern': "url('img/Mas-O/GUA4.png')"
       },
       colors: {
-        primary: '#7b2cbf',
-        dark: '#3d0066',
-        secondary: '#ff8500',
+        primary: '#0353a4',
+        dark: '#ffafcc',
+        secondary: '#0353a4',
       },
       screens: {
         '2xl': '1320px',
