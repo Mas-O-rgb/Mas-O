@@ -7,6 +7,7 @@ module.exports = {
       padding: '16px',
     },
     extend: {
+      
       animation: {
         'spin': 'spin 1s linear infinite',
       },
@@ -14,9 +15,9 @@ module.exports = {
         'hero-pattern': "url('img/Mas-O/GUA4.png')"
       },
       colors: {
-        primary: '#7b2cbf',
-        dark: '#ffafcc',
-        secondary: '#dec9e9',
+        primary: '#5a189a',
+        secondary: '#f0fff1',
+        dark: '#facb2e',
       },
       screens: {
         '2xl': '1320px',
@@ -25,4 +26,3 @@ module.exports = {
   },
   plugins: [],
 }
-
