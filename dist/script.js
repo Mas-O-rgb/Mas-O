@@ -44,12 +44,20 @@ form.addEventListener('submit', e => {
       console.log('Success!', response)
     })
     .catch(error => console.error('Error!', error.message))
-  })
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const inputField = document.getElementById("message");
+    const counter = document.getElementById("counter");
+
+    inputField.addEventListener("keyup", function () {
+        counter.innerText = this.value.length;
+    });
+  });
 
 // Alert XXXXXXX
 function myXXXXXXX() {
-  window.alert('XXXXXXX')
+  // window.alert('XXXXXXX')
+  const name = prompt("Hay, Siapa nama kamu?");
+  alert(name ? `Selamat datang, ${name}!` : "Kamu tidak memasukan nama.")
 }
-
-const name = prompt("Hay, Siapa nama kamu?");
-alert(name ? `Selamat datang, ${name}!` : "Kamu tidak memasukan nama.")
