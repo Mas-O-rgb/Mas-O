@@ -45,3 +45,11 @@ form.addEventListener('submit', e => {
     })
     .catch(error => console.error('Error!', error.message))
   })
+
+// Alert XXXXXXX
+function myXXXXXXX() {
+  window.alert('XXXXXXX')
+}
+
+const name = prompt("Hay, Siapa nama kamu?");
+alert(name ? `Selamat datang, ${name}!` : "Kamu tidak memasukan nama.")
