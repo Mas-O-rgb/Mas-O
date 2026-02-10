@@ -46,14 +46,14 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const inputField = document.getElementById("message");
-    const counter = document.getElementById("counter");
-
-    inputField.addEventListener("keyup", function () {
-        counter.innerText = this.value.length;
-    });
+// Angka karakter
+document.addEventListener("DOMContentLoaded", function () {
+  const inputField = document.getElementById("message");
+  const counter = document.getElementById("counter");
+  inputField.addEventListener("keyup", function () {
+      counter.innerText = this.value.length;
   });
+});
 
 // Alert XXXXXXX
 function myXXXXXXX() {
