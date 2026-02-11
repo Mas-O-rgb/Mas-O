@@ -671,6 +671,10 @@ video {
   margin-right: auto;
 }
 
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -755,22 +759,6 @@ video {
   margin-top: 2rem;
 }
 
-.-mb-3 {
-  margin-bottom: -0.75rem;
-}
-
-.-mt-4 {
-  margin-top: -1rem;
-}
-
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
-.-mt-3 {
-  margin-top: -0.75rem;
-}
-
 .block {
   display: block;
 }
@@ -836,6 +824,10 @@ video {
   width: 1rem;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .w-64 {
   width: 16rem;
 }
@@ -846,26 +838,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-9 {
-  width: 2.25rem;
-}
-
-.w-7\/12 {
-  width: 58.333333%;
-}
-
-.w-lvw {
-  width: 100lvw;
-}
-
-.w-7 {
-  width: 1.75rem;
-}
-
-.w-52 {
-  width: 13rem;
 }
 
 .max-w-2xl {
@@ -926,27 +898,6 @@ video {
   animation: blink 2s linear infinite;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -971,6 +922,16 @@ video {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .grid-flow-col {
@@ -999,10 +960,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1136,11 +1093,6 @@ video {
 
 .bg-transparent {
   background-color: transparent;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -1297,20 +1249,12 @@ video {
   padding-top: 1rem;
 }
 
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
 .text-center {
   text-align: center;
 }
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-2xl {
@@ -1330,6 +1274,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
   line-height: 1;
 }
 
@@ -1356,11 +1305,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1459,6 +1403,16 @@ video {
   outline-style: solid;
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-filter {
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1488,8 +1442,8 @@ body {
   z-index: 9999;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.4;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 

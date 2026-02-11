@@ -50,6 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // Alert XXXXXXX
 function myXXXXXXX() {
   // window.alert('XXXXXXX')
-  const name = prompt("Hay, Siapa nama kamu?");
-  alert(name ? `Selamat datang, ${name}!` : "Kamu tidak memasukan nama.")
+  const name = prompt("Absen dulu yuk, siapa nama lu?");
+  alert(name ? `Selamat datang, ${name}!` : "Wahh kaco ngga masukin nama.")
 }
