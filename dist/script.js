@@ -1,6 +1,7 @@
 // Navbar-Fixed
 window.onscroll = function () {
   const header = document.querySelector('header');
+  if (!header) return; // Mencegah error jika header belum dimuat
   const fixedNav = header.offsetTop;
 
   if (window.pageYOffset > fixedNav) {
@@ -9,15 +10,6 @@ window.onscroll = function () {
     header.classList.remove('navbar-fixed');
   }
 };
-
-// Hamburger
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('#nav-menu');
-
-hamburger.addEventListener('click', function () {
-  hamburger.classList.toggle('hamburger-active');
-  navMenu.classList.toggle('hidden');
-});
 
 // Contact
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyyhA79VJ2BrJ6VBM3dl6fTkPNJgj1Ew1vQBjQn8Gv-grJc4MgbPavQMMaYFt9yzHWg/exec'
