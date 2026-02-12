@@ -1,20 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['index.html', 'portfolio.html', 'about.html', 'contact.html', './header_footer/footer.html', './header_footer/header.html', '404.html'],
+  content: ['index.html', 'jejak_visual.html', 'about.html', 'contact.html', '404.html', './header_footer/footer.html', './header_footer/header.html'],
   theme: {
     container: {
       center: true,
       padding: '16px',
     },
-    extend: {
 
+    extend: {
       keyframes: {
         blink: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
       },
-
       animation: {
         'spin': 'spin 1s linear infinite',
         'blink': 'blink 2s linear infinite',
@@ -32,6 +31,7 @@ module.exports = {
       }
     },
   },
+
   plugins: [
     "@tailwindcss/postcss",
   ],
