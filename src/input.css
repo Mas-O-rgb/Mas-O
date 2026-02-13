@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Merienda';
+  font-family: 'Merienda', 'Carena';
 }
 
 .navbar-fixed {
